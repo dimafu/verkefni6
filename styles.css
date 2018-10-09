@@ -42,9 +42,13 @@ h1 {
 
 /* grid fyrir efni, setja þarf upp í html */
 
-.grid__row {
+.grid {
   display: flex;
   flex-direction: column;
+}
+
+.grid__row {
+  display: flex;
   margin-left: -10px;
   margin-right: -10px;
 }
@@ -55,6 +59,16 @@ h1 {
   padding-left: 10px;
 }
 
+.grid__image {
+  padding: 0 10px 0 10px;
+  width: 50%;
+  flex: 1;
+}
+
+.grid__text {
+  flex: 1;
+}
+
 /* TODO setja upp grid fyrir >= 1000px */
 
 /* TODO koma mynd fyrir á öðrum stað í < 1000px */
@@ -62,6 +76,99 @@ h1 {
 /* grid fyrir cards */
 
 .cards {
+  display: flex;
+  justify-content: space-around;
+  background: #eee;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 470px;
+  max-height: 300px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+}
+
+.card__title {
+  margin-bottom: 20px;
+  font-size: 1.375em;
+  line-height: 1;
+  word-break: break-word;
+}
+
+.card__content {
+  display: flex;
+  flex: 1;
+}
+
+.card__text {
+  font-size: 1em;
+  line-height: 1.375;
+  overflow: auto;
+  word-break: break-word;
+}
+
+.card__image {
+  padding-left: 20px;
+  flex: 0 0 150px;
+}
+
+.card__img {
+  max-width: 100%;
+}
+
+.card__tags {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+}
+
+.card__tag {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* @media (max-width: 699px) {
+  .grid {
+    width: 100%;
+  }
+  .cards {
+    width: 100%;
+  }
+  .card {
+    border: 2px solid #aaa;
+  }
+} */
+
+/* @media (min-width: 700px) {
+  .cards {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .grid {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+  .cards {
+    width: 33.33333%;
+  }
+} */
+
+@media (min-width: 1490px) {
+  main {
+    padding: 0;
+  }
 }
 
 /* TODO útfæra grid fyrir cards */
